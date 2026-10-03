@@ -4,6 +4,23 @@ Un instructor puede crear cursos. Un estudiante puede inscribirse en múltiples 
 
 La API debe gestionar la relación de inscripciones y permitir listar los cursos de un estudiante o los estudiantes de un curso
 
+## Requerimientos
+
+- Docker
+
+### Inicializacion
+
+Abrir terminal y correr el siguiente comando:
+
+```batch|bash
+docker compose up --build -d
+```
+Revisar base de datos en terminal:
+
+```batch|bash
+docker exec -it mysql_db_dev mysql -u root -p
+```
+
 ## Diagramas:
 
 ### Entidad-Relacion
