@@ -1,4 +1,4 @@
-package sv.ues.edu.ids.poo.cursos;
+package sv.edu.ues.ids.poo.cursos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
