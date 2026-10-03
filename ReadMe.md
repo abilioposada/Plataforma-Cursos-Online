@@ -13,4 +13,4 @@ La API debe gestionar la relación de inscripciones y permitir listar los cursos
 [![ER](./src/main/resources/static/diagramas/ER.svg "ER")](https://app.diagrams.net/#G1Zk41vk7w4nlJFcjxgWfQrw3sWo9-ktVV#%7B%22pageId%22%3A%22zYdk7aZqAQoJcKxQO6y5%22%7D)
 
 ### Casos de Uso
-![Casos de Uso](./src/main/resources/static/diagramas/Diagrama-de-Uso.svg "Casos de Uso")
+[![Casos de Uso](./src/main/resources/static/diagramas/Diagrama-de-Uso.svg "Casos de Uso")](https://app.diagrams.net/#G1Zk41vk7w4nlJFcjxgWfQrw3sWo9-ktVV#%7B%22pageId%22%3A%22GL8w39yK3QvlQB7dP-3l%22%7D)
