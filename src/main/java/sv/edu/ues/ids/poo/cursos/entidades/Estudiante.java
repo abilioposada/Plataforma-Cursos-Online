@@ -8,7 +8,7 @@ import java.util.Date;
 @Entity
 @Table(name = "estudiantes")
 public class Estudiante extends Persona {
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String carnet;
 	private Date fechaRegistro;
 
@@ -32,6 +32,7 @@ public class Estudiante extends Persona {
 
 	@Override
 	public String toString() {
-		return "Estudiante [carnet=" + carnet + ", fechaRegistro=" + fechaRegistro + ", persona=" + super.toString() + "]";
+		return "Estudiante [carnet=" + carnet + ", fechaRegistro=" + fechaRegistro + ", persona=" + super.toString()
+				+ "]";
 	}
 }
