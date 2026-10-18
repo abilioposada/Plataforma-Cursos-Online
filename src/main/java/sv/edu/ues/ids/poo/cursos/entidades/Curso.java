@@ -1,6 +1,6 @@
 package sv.edu.ues.ids.poo.cursos.entidades;
-import java.io.Serializable;
 
+import java.io.Serializable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -14,7 +14,7 @@ import jakarta.persistence.ManyToOne;
 @Table(name = "cursos")
 public class Curso implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private String codigo;
@@ -25,7 +25,6 @@ public class Curso implements Serializable {
 
 	@Column(unique = true)
 	private String nombre;
-
 	private String descripcion;
 
 	// region Getters & Setters
@@ -64,6 +63,7 @@ public class Curso implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Curso [codigo=" + codigo + ", instructor=" + instructor + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
+		return "Curso [codigo=" + codigo + ", instructor=" + instructor + ", nombre=" + nombre + ", descripcion="
+				+ descripcion + "]";
 	}
 }

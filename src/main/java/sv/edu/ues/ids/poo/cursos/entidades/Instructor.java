@@ -32,6 +32,7 @@ public class Instructor extends Persona {
 
 	@Override
 	public String toString() {
-		return "Instructor [codigo=" + codigo + ", fechaContratacion=" + fechaContratacion + ", persona=" + super.toString() + "]";
+		return "Instructor [codigo=" + codigo + ", fechaContratacion=" + fechaContratacion + ", persona="
+				+ super.toString() + "]";
 	}
 }

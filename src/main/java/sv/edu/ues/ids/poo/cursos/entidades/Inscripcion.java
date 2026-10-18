@@ -2,7 +2,6 @@ package sv.edu.ues.ids.poo.cursos.entidades;
 
 import java.io.Serializable;
 import java.sql.Date;
-
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -28,7 +27,6 @@ public class Inscripcion implements Serializable {
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "id_estudiante")
 	private Estudiante estudiante;
-
 	private Date fechaHora;
 	private Double promedio;
 

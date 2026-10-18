@@ -2,7 +2,6 @@ package sv.edu.ues.ids.poo.cursos.entidades.identificadores;
 
 import java.io.Serializable;
 import java.util.Objects;
-
 import jakarta.persistence.Embeddable;
 
 @Embeddable
