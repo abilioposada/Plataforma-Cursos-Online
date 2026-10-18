@@ -8,7 +8,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,9 +21,11 @@ public class Persona implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String dui;
 	private String nombre;
+
+	@Column(unique = true, nullable = false)
 	private String correo;
 	private Date fechaNacimiento;
 
@@ -72,6 +73,7 @@ public class Persona implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", dui=" + dui + ", nombre=" + nombre + ", correo=" + correo + ", fechaNacimiento=" + fechaNacimiento + "]";
+		return "Persona [id=" + id + ", dui=" + dui + ", nombre=" + nombre + ", correo=" + correo + ", fechaNacimiento="
+				+ fechaNacimiento + "]";
 	}
 }
