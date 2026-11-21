@@ -25,7 +25,7 @@ public class InstructoresControlador {
 	}
 
 	@GetMapping("/{codigo}")
-	public Instructor buscarPorCodigo(@PathVariable String codigo) throws Exception {
+	public Instructor mostrar(@PathVariable String codigo) throws Exception {
 		return servicio.buscarPorCodigo(codigo);
 	}
 
@@ -46,7 +46,7 @@ public class InstructoresControlador {
 	}
 
 	@DeleteMapping("/{codigo}")
-	public void destroy(@PathVariable String codigo) {
+	public void destruir(@PathVariable String codigo) {
 		try {
 			Instructor instructor = servicio.buscarPorCodigo(codigo);
 			servicio.eliminarPorId(instructor.getId());

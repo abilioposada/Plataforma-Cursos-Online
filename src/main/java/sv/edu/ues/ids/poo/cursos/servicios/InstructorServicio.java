@@ -29,7 +29,7 @@ public class InstructorServicio implements IInstructorServicio {
 
 	@Override
 	public Instructor buscarPorCodigo(String codigo) throws Exception {
-		return repositorio.findByCodigo(codigo);
+		return repositorio.findByCodigo(codigo)
+			.orElseThrow(() -> new Exception("Instructor no encontrado con el código: " + codigo));
 	}
-
 }

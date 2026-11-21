@@ -19,7 +19,7 @@ public class Curso implements Serializable {
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private String codigo;
 
-	@JoinColumn(name = "id_instructor")
+	@JoinColumn(name = "codigo_instructor", referencedColumnName = "codigo")
 	@ManyToOne(optional = false)
 	private Instructor instructor;
 

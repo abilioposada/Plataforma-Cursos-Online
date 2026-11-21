@@ -29,6 +29,7 @@ public class EstudianteServicio implements IEstudianteServicio {
 
 	@Override
 	public Estudiante buscarPorCarnet(String carnet) throws Exception {
-		return repositorio.findByCarnet(carnet);
+		return repositorio.findByCarnet(carnet)
+			.orElseThrow(() -> new Exception("Estudiante no encontrado con el carnet: " + carnet));
 	}
 }

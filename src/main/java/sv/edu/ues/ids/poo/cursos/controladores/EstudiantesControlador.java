@@ -25,7 +25,7 @@ public class EstudiantesControlador {
 	}
 
 	@GetMapping("/{carnet}")
-	public Estudiante buscarPorCarnet(@PathVariable String carnet) throws Exception {
+	public Estudiante mostrar(@PathVariable String carnet) throws Exception {
 		return servicio.buscarPorCarnet(carnet);
 	}
 
@@ -46,7 +46,7 @@ public class EstudiantesControlador {
 	}
 
 	@DeleteMapping("/{carnet}")
-	public void destroy(@PathVariable String carnet) {
+	public void destruir(@PathVariable String carnet) {
 		try {
 			Estudiante estudiante = servicio.buscarPorCarnet(carnet);
 			servicio.eliminarPorId(estudiante.getId());
