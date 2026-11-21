@@ -4,6 +4,14 @@ Un instructor puede crear cursos. Un estudiante puede inscribirse en múltiples 
 
 La API debe gestionar la relación de inscripciones y permitir listar los cursos de un estudiante o los estudiantes de un curso
 
+# Integrantes
+
+| CARNET | CORREO | APELLIDOS | NOMBRES |
+| --- | --- | --- | --- |
+| PR17014 | pr17014@ues.edu.sv | Posada Reina | Manuel Abilio |
+| CS12034 | cs12034@ues.edu.sv | Cambara Sandoval | Guillermo |
+| GD14019 | gd14019@ues.edu.sv | Gámez Dueñas | Daniel Ernesto |
+
 ## Requerimientos
 
 - Docker

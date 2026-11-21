@@ -16,7 +16,7 @@ public class Inscripcion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	private IdInscripcion id = new IdInscripcion();
+	private IdInscripcion id;
 
 	@MapsId("codigoCurso")
 	@ManyToOne(optional = false)
@@ -31,6 +31,14 @@ public class Inscripcion implements Serializable {
 	private Double promedio;
 
 	// region Getters & Setters
+	public IdInscripcion getId() {
+		return id;
+	}
+
+	public void setId(IdInscripcion id) {
+		this.id = id;
+	}
+
 	public Curso getCurso() {
 		return curso;
 	}
