@@ -18,6 +18,20 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: cursos-config
+          env:
+            - name: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: cursos-secret
+                  key: DB_USER
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cursos-secret
+                  key: DB_PASSWORD
 ---
 apiVersion: v1
 kind: Service
