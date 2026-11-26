@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cursos-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cursos-api
+  template:
+    metadata:
+      labels:
+        app: cursos-api
+    spec:
+      containers:
+        - name: cursos-api
+          image: cursos-api:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: cursos-config
+          env:
+            - name: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: cursos-secret
+                  key: DB_USER
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cursos-secret
+                  key: DB_PASSWORD
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cursos-api
+spec:
+  type: NodePort
+  selector:
+    app: cursos-api
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
